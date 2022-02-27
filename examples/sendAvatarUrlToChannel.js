@@ -1,4 +1,4 @@
-const {Client, Intents} = require('esmerald.js');
+const { Client, Intents } = require('esmerald.js');
 
 const client = new Client({
   token: 'TOKEN',
