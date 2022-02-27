@@ -25,7 +25,7 @@
         "name": "Esmeraldjs Team",
         "email": "esmeraldjsorg@gmail.com"
     },
-    "license": "ISC",
+    "license": "MIT",
     "bugs": {
         "url": "https://github.com/esmeraldjs/core/issues"
     },
