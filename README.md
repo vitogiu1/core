@@ -33,7 +33,7 @@ pnpm add esmerald.js
 const { Client, Intents } = require('esmerald.js');
 
 const client = new Client({
-  token: 'your token',
+  token: 'your discord bot token',
   intents: [Intents.GUILDS],
 })
 
