@@ -39,3 +39,5 @@ const client = new Client({
 
 client.connect();
 ```
+---
+Make with ❤ by Esmerald Team!
