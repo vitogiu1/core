@@ -1,4 +1,4 @@
-## Esmerald.js
+## 🌌 Esmerald.js
 <p align="center">
 <img src="esmerald.png">
 <a href="https://www.npmjs.com/package/esmerald.js"><img src="https://img.shields.io/npm/v/esmerald.js.svg?maxAge=3600" alt="npm version"/></a>
@@ -9,13 +9,25 @@
 
 <hr>
 
-#### Why use esmerald.js?
+#### 👀 Why use esmerald.js?
 
 - Simple to use;
 - Beta updates, and easy support;
 - Save ram memory.
 
-### Example
+  
+  
+## 🚧 Installations
+ - **💻 Node v16.14+ is required**
+ 
+ ```sh-session
+npm install esmerald.js
+yarn add esmerald.js
+pnpm add esmerald.js
+```
+ 
+ 
+## 💭 Example
 
 ```js
 const { Client, Intents } = require('esmerald.js');
