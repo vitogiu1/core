@@ -2,8 +2,8 @@
 <p align="center">
 <img src="esmerald.png">
 <a href="https://www.npmjs.com/package/esmerald.js"><img src="https://img.shields.io/npm/v/esmerald.js.svg?maxAge=3600" alt="npm version"/></a>
-<a href="https://www.npmjs.com/package/esmerald.js.js"><img src="https://img.shields.io/npm/dt/esmerald.js.js.svg?maxAge=3600" alt="npm downloads" /></a>
-</p
+<a href="https://www.npmjs.com/package/esmerald.js"><img src="https://img.shields.io/npm/dt/esmerald.js.svg?maxAge=3600" alt="npm downloads" /></a>
+</p>
 
 ##### A simple and powerfull library for Discord API
 
