@@ -3,7 +3,7 @@ const { version } = require('../../package.json');
 
 const UserAgent = `esmerald (https://github.com/esmeraldjs/core ${version})`;
 const LibInfos = {
-  VERSION: '0.1.0',
+  VERSION: '0.1.2',
   NAME: 'esmerald',
   DESCRIPTION: 'A discord bot written in esmerald',
 };
