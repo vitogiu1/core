@@ -1,4 +1,4 @@
-const { Client, Intents, RichEmbed } = require('../src/index');
+const { Client, Intents, RichEmbed } = require('esmerald.js');
 
 const client = new Client({
   token: 'TOKEN',
