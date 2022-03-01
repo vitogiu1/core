@@ -39,5 +39,15 @@ const client = new Client({
 
 client.connect();
 ```
----
+
+## Links
+
+- Website
+  - [esmeraldjs.vercel.app](https://esmeraldjs.vercel.app)
+
+- Discord
+  - [discord.gg/hQuMTqe9Hx](https://discord.gg/hQuMTqe9Hx)
+
+<hr>
+
 Make with ❤ by Esmerald Team!
