@@ -1,5 +1,4 @@
-/* eslint-disable import/no-unresolved */
-const { Client, Intents } = require('../src/index');
+const { Client, Intents } = require('esmerald.js');
 
 const client = new Client({
   token: 'TOKEN',
