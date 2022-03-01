@@ -8,7 +8,7 @@ const client = new Client({
 client.on('messageCreate', (message) => {
   client.users.fetch('USER_ID').then((user) => {
     const embed = new RichEmbed()
-      .setColor(0x00ff00)
+      .setColor("#000")
       .setTitle('Avatar')
       .setDescription(`Avatar from **${user.username}**`)
       .setImage(user.avatarURL({ dynamic: true }));
