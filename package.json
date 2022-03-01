@@ -1,6 +1,6 @@
 {
   "name": "esmerald.js",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A powerfull library of Discord API",
   "main": "src/index.js",
   "scripts": {
