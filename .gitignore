@@ -2,3 +2,5 @@
 /package-lock.json
 /yarn.lock
 /tests
+package-lock.json
+*.editorconfig

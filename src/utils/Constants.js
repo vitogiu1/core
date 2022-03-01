@@ -1,18 +1,22 @@
-const { version } = require(`${process.cwd()}/package.json`),
-UserAgent = `esmerald (https://github.com/esmeraldjs/core ${version})`,
-Avatars = [
+/* eslint-disable no-bitwise */
+const { version } = require('../../package.json');
+
+const UserAgent = `esmerald (https://github.com/esmeraldjs/core ${version})`;
+const LibInfos = {
+  VERSION: '0.1.0',
+  NAME: 'esmerald',
+  DESCRIPTION: 'A discord bot written in esmerald',
+};
+
+const Avatars = [
   'https://cdn.discordapp.com/embed/avatars/0.png',
   'https://cdn.discordapp.com/embed/avatars/1.png',
   'https://cdn.discordapp.com/embed/avatars/2.png',
   'https://cdn.discordapp.com/embed/avatars/3.png',
-  'https://cdn.discordapp.com/embed/avatars/4.png'
-],
-LibInfos = {
-  VERSION: '0.1.0',
-  NAME: 'esmerald',
-  DESCRIPTION: 'A discord bot written in esmerald',
-},
-Intents = {
+  'https://cdn.discordapp.com/embed/avatars/4.png',
+];
+
+const Intents = {
   GUILDS: 1 << 0,
   GUILD_MEMBERS: 1 << 1,
   GUILD_BANS: 1 << 2,
@@ -27,9 +31,10 @@ Intents = {
   GUILD_MESSAGE_TYPING: 1 << 11,
   DIRECT_MESSAGES: 1 << 12,
   DIRECT_MESSAGE_REACTIONS: 1 << 13,
-  DIRECT_MESSAGE_TYPING: 1 << 14
-},
-Codes = {
+  DIRECT_MESSAGE_TYPING: 1 << 14,
+};
+
+const Codes = {
   DISPATCH: 0,
   HEARTBEAT: 1,
   IDENTIFY: 2,
@@ -41,7 +46,7 @@ Codes = {
   REQUEST_GUILD_MEMBERS: 8,
   INVALID_SESSION: 9,
   HELLO: 10,
-  HEARTBEAT_ACK: 11
+  HEARTBEAT_ACK: 11,
 };
 
 module.exports = {
@@ -49,5 +54,5 @@ module.exports = {
   Avatars,
   Intents,
   Codes,
-  LibInfos
-}
+  LibInfos,
+};

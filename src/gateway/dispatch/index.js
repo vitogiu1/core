@@ -1,4 +1,4 @@
-const Ready = require('./Ready');
+const READY = require('./Ready');
+const MESSAGE_CREATE = require('./MessageCreate');
 
-module.exports = { Ready }
-
+module.exports = { READY, MESSAGE_CREATE };

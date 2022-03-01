@@ -1,45 +1,43 @@
 {
-    "name": "esmerald.js",
-    "version": "0.1.0",
-    "description": "A powerfull library of Discord API",
-    "main": "src/index.js",
-    "scripts": {
-        "start": "node src/index.js",
-        "build": "tsc",
-        "watch": "node src/index.js watch",
-        "lint": "eslint src/index.js",
-        "lint:fix": "eslint src/index.js --fix",
-        "precommit": "npm run lint && npm run test"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/esmeraldjs/core.git"
-    },
-    "keywords": [
-        "discord",
-        "api",
-        "library",
-        "bot"
-    ],
-    "author": {
-        "name": "Esmeraldjs Team",
-        "email": "esmeraldjsorg@gmail.com"
-    },
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/esmeraldjs/core/issues"
-    },
-    "homepage": "https://github.com/esmeraldjs/core#readme",
-    "devDependencies": {
-        "eslint": "^8.9.0",
-        "eslint-config-standart": "^0.2.0",
-        "eslint-plugin-import": "^2.25.4",
-        "eslint-plugin-node": "^11.1.0",
-        "eslint-plugin-promise": "^6.0.0",
-        "prettier": "^2.5.1",
-        "typescript": "^4.5.5"
-    },
-    "dependencies": {
-        "ws": "^8.5.0"
-    }
+  "name": "esmerald.js",
+  "version": "0.1.1",
+  "description": "A powerfull library of Discord API",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "build": "tsc",
+    "watch": "node src/index.js watch",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
+    "precommit": "npm run lint && npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/esmeraldjs/core.git"
+  },
+  "keywords": [
+    "discord",
+    "api",
+    "library",
+    "bot"
+  ],
+  "author": {
+    "name": "Esmeraldjs Team",
+    "email": "esmeraldjsorg@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/esmeraldjs/core/issues"
+  },
+  "homepage": "https://github.com/esmeraldjs/core#readme",
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "husky": "^7.0.4",
+    "prettier": "^2.5.1",
+    "typescript": "^4.5.5"
+  },
+  "dependencies": {
+    "ws": "^8.5.0"
+  }
 }

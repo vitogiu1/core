@@ -1,14 +1,18 @@
-const Client = require('./Client'),
-Structures = require('./structures/'),
-{ Intents, LibInfos } = require('./utils/Constants');
+const Client = require('./Client');
+const Structures = require('./structures/index');
 
-if(LibInfos.VERSION !== require('../package.json').version) {
-throw new Error('The version of the EsmeraldJs is outdated or not compatible with the version of the library. Please update the library.');
+const { Intents, LibInfos } = require('./utils/Constants');
+const { version } = require('../package.json');
+
+if (LibInfos.VERSION !== version) {
+  throw new Error('The version of the EsmeraldJs is outdated or not compatible with the version of the library. Please update the library.');
 }
 
-module.exports = {
-  Client,
-  Structures,
-  Intents,
-  LibInfos
-}
+exports.Client = Client;
+exports.Intents = Intents;
+exports.LibInfos = LibInfos;
+
+exports.TextChannel = Structures.TextChannel;
+exports.RichEmbed = Structures.RichEmbed;
+exports.Message = Structures.Message;
+exports.User = Structures.User;

@@ -1,45 +1,71 @@
-const { EventEmitter } = require('events'),
+const { EventEmitter } = require('events');
 
-WebSocketHandler = require('./gateway/WebSocketHandler'),
-GatewayIntents = require('./gateway/GatewayIntents'),
-Users = require("./gateway/Users"),
-RequestHandler = require('./api-rest/RequestHandler'),
-Endpoints = require('./api-rest/Endpoints'),
-Structures = require('./structures');
+const WebSocketHandler = require('./gateway/WebSocketHandler');
+const GatewayIntents = require('./gateway/GatewayIntents');
+const RequestHandler = require('./api-rest/RequestHandler');
+const Endpoints = require('./api-rest/Endpoints');
 
+const { Message } = require('./structures/index');
+const { Channels, Users } = require('./gateway/managers/index');
+
+/**
+ * @class
+ * @extends {EventEmitter}
+ */
 module.exports = class Client extends EventEmitter {
-  constructor (options) {
-    super()
+  /**
+   *
+   * @param {object[]} options
+   */
+  constructor(options) {
+    super();
 
-    this.requestHandler = new RequestHandler(options.token)
-    this.ws = new WebSocketHandler(this, options.token, GatewayIntents.resolve(options.intents))
-    this.ready = null
-    this.users = new Users(this, options.token)
+    /**
+     * @type {RequestHandler}
+     */
+    this.requestHandler = new RequestHandler(options.token);
+
+    /**
+     * @type {WebSocketHandler}
+     */
+    this.ws = new WebSocketHandler(this, options.token, GatewayIntents.resolve(options.intents));
+
+    /**
+     * @type {null|Date}
+     */
+    this.ready = null;
+
+    this.channels = new Channels(this);
+    this.users = new Users(this);
   }
 
-  connect () {
-    this.ws.connect()
-    this.ready = Date.now()
+  /**
+   * @type {?number}
+   * @readonly
+   */
+  get uptime() {
+    return Date.now() - this.ready;
   }
 
-  createMessage (channelId, options) {
-    return this.requestHandler.request(Endpoints.CHANNEL_MESSAGES(channelId), {
-      method: 'POST',
-      body: options
-    })
+  /**
+   * @returns {Promise<void>}
+   */
+  connect() {
+    this.ws.connect();
+    this.ready = Date.now();
   }
 
-  createMessageEmbed(channelId, options) {
-    return this.requestHandler.request(Endpoints.CHANNEL_MESSAGES(channelId), {
-      method: 'POST',
-      body: {
-        embed: options
-      }
-    })
+  /**
+   * @param {string} channelId
+   * @param {Object[]} options
+   * @returns {Message}
+   */
+  createMessage(channelId, options) {
+    return this.requestHandler
+      .request(Endpoints.CHANNEL_MESSAGES(channelId), {
+        method: 'POST',
+        body: options,
+      })
+      .then((message) => new Message(this, message));
   }
-
-  get uptime () {
-    return Date.now() - this.ready
-  }
-
-}
+};
