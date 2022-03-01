@@ -2,7 +2,7 @@ const { Client, Intents, RichEmbed } = require('esmerald.js');
 
 const client = new Client({
   token: 'TOKEN',
-  intents: [Intents.GUILDS],
+  intents: [Intents.GUILDS, Intents.GUILD_MESSAGES],
 });
 
 client.on('messageCreate', (message) => {
